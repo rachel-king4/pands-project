@@ -1,12 +1,17 @@
 # **pands-project**
 
+## **Table of Contents**
 
+- [Introduction](#introduction)
+- [Discussion of Previous Analyses](#discussion-of-previous-analyses)
+- [My Analysis](#my-analysis---what-it-entails-how-python-is-used-to-do-it-how-to-run-the-python-code)
+- [References](#references)
 
 ## **Introduction** ##
 
 The Iris dataset is one of the most well-known data sets in relation to pattern recognition.
 
-It contains 3 classes, with each class referencing a typr of iris plant. There are 50 instances of each class, with 150 instances in total.
+It contains 3 classes, with each class referencing a type of iris plant. There are 50 instances of each class, with 150 instances in total.
 
 Each class has 4 attributes, which are:
 
