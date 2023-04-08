@@ -1,0 +1,6 @@
+Sepal Length is the first variable we are going to summarise.
+From the Histogram.png file, the top left histogram displays the number of occurrences for each sepal length.
+The majority of sepal lengths fall in the 5.0-6.5 cm region.
+There are few sepal lengths greater than 7.0cm.
+
+From the scatter plot of sepal length vs sepal width, it is clear that the species "Iris-setosa" has the smallest sepal lengths of all the species.The species "Iris-virginica" has mostly larger sepal lengths, while the species "Iris-versicolor" falls somewhere in the middle
