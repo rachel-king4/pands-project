@@ -33,7 +33,7 @@ One class is linearly separable from the other two, while the latter are not lin
 
 ## **My Analysis - what it entails, how Python is used to do it, how to run the Python code** ##
 
-Performing exploratory data analysis means to ana;yse data using visual techniques. Python can be used to do this. It enables trends/patterns to be identified.
+Performing exploratory data analysis means to analyse data using visual techniques. Python can be used to do this. It enables trends/patterns to be identified.
 
 
 

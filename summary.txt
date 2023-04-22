@@ -3,4 +3,44 @@ From the Histogram.png file, the top left histogram displays the number of occur
 The majority of sepal lengths fall in the 5.0-6.5 cm region.
 There are few sepal lengths greater than 7.0cm.
 
-From the scatter plot of sepal length vs sepal width, it is clear that the species "Iris-setosa" has the smallest sepal lengths of all the species.The species "Iris-virginica" has mostly larger sepal lengths, while the species "Iris-versicolor" falls somewhere in the middle
+From the scatter plot of sepal length vs sepal width, it is clear that the species "Iris-setosa" has the smallest sepal lengths of all the species.The species "Iris-virginica" has mostly larger sepal lengths, while the species "Iris-versicolor" falls somewhere in the middle.
+
+A table of some Sepal Length statistics can be seen below:
++-----------------+--------+-------+-------+
+|      Class      |   Mean |   Min |   Max |
++=================+========+=======+=======+
+|   Iris-setosa   |  5.006 |   4.3 |   5.8 |
++-----------------+--------+-------+-------+
+| Iris-versicolor |  5.936 |   4.9 |   7   |
++-----------------+--------+-------+-------+
+| Iris-virginica  |  6.588 |   4.9 |   7.9 |
++-----------------+--------+-------+-------+
+From the Sepal Length Statistics plot, we can see the range of data for min, max and mean for all three classes of Iris plants.
+The line represents the mean for all three classes, while the shaded region represents the spread of data from minimum to maximum.
++-----------------+--------+-------+-------+
+|      Class      |   Mean |   Min |   Max |
++=================+========+=======+=======+
+|   Iris-setosa   |  3.418 |   2.3 |   4.4 |
++-----------------+--------+-------+-------+
+| Iris-versicolor |  2.77  |   2   |   3.4 |
++-----------------+--------+-------+-------+
+| Iris-virginica  |  2.974 |   2.2 |   3.8 |
++-----------------+--------+-------+-------+
++-----------------+--------+-------+-------+
+|      Class      |   Mean |   Min |   Max |
++=================+========+=======+=======+
+|   Iris-setosa   |  1.464 |   1   |   1.9 |
++-----------------+--------+-------+-------+
+| Iris-versicolor |  4.26  |   3   |   5.1 |
++-----------------+--------+-------+-------+
+| Iris-virginica  |  5.552 |   4.5 |   6.9 |
++-----------------+--------+-------+-------+
++-----------------+--------+-------+-------+
+|      Class      |   Mean |   Min |   Max |
++=================+========+=======+=======+
+|   Iris-setosa   |  0.244 |   0.1 |   0.6 |
++-----------------+--------+-------+-------+
+| Iris-versicolor |  1.326 |   1   |   1.8 |
++-----------------+--------+-------+-------+
+| Iris-virginica  |  2.026 |   1.4 |   2.5 |
++-----------------+--------+-------+-------+
