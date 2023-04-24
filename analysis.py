@@ -43,7 +43,6 @@ with open('summary.txt', 'w') as f:
 # Sepal Length Statistics
 table_of_data = iris.groupby('Class').agg({'Sepal_Length': ['mean', 'min', 'max']})
 table_of_data.reset_index(inplace=False)
-#print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'))
 with open('summary.txt', 'a') as f:
     print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
 
@@ -74,9 +73,8 @@ with open('summary.txt', 'a') as f:
 # Sepal Width Statistics
 table_of_data = iris.groupby('Class').agg({'Sepal_Width': ['mean', 'min', 'max']})
 table_of_data.reset_index(inplace=False)
-#print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'))
-with open('summary.txt', 'a') as f:
-    print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
+#with open('summary.txt', 'a') as f:
+    #print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
 
 sepal_width = iris.groupby(["Class"],as_index=False).agg(
     min=pd.NamedAgg(column="Sepal_Width", aggfunc="min"),
@@ -96,9 +94,8 @@ plt.savefig('Sepal Width Statistics.png')
 # Petal Length Statistics
 table_of_data = iris.groupby('Class').agg({'Petal_Length': ['mean', 'min', 'max']})
 table_of_data.reset_index(inplace=False)
-#print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'))
-with open('summary.txt', 'a') as f:
-    print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
+#with open('summary.txt', 'a') as f:
+    #print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
 
 petal_length = iris.groupby(["Class"],as_index=False).agg(
     min=pd.NamedAgg(column="Petal_Length", aggfunc="min"),
@@ -118,9 +115,8 @@ plt.savefig('Petal Length Statistics.png')
 # Petal Width Statistics
 table_of_data = iris.groupby('Class').agg({'Petal_Width': ['mean', 'min', 'max']})
 table_of_data.reset_index(inplace=False)
-#print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'))
-with open('summary.txt', 'a') as f:
-    print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
+#with open('summary.txt', 'a') as f:
+    #print(tabulate(table_of_data, headers = ["Class", "Mean", "Min", "Max"], tablefmt='grid', stralign='center'), file=f)
 
 petal_width = iris.groupby(["Class"],as_index=False).agg(
     min=pd.NamedAgg(column="Petal_Width", aggfunc="min"),
@@ -168,9 +164,6 @@ for ax in axes.flat:
 
 fig.savefig('Histograms.png')
 
-
-# min, max and mean of each variable
-
 # scatter plots of each pair of variables
 # sepal length vs width
 fig, ax = plt.subplots()
@@ -184,7 +177,7 @@ for key, group in grouped:
 plt.legend(bbox_to_anchor=(1, 1), loc=2)   # places legend outside the plot
 plt.xlabel("Sepal Length (cm)")
 plt.ylabel("Sepal Width (cm)")
-plt.show()
+plt.savefig('Sepal Length vs Sepal Width.png')
 
 
 # petal length vs width
@@ -199,4 +192,4 @@ for key, group in grouped:
 plt.legend(bbox_to_anchor=(1, 1), loc=2)   # places legend outside the plot
 plt.xlabel("Petal Length (cm)")
 plt.ylabel("Petal Width (cm)")
-plt.show()
+plt.savefig('Petal Length vs Petal Width.png')
