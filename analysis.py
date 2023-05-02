@@ -138,26 +138,41 @@ plt.savefig('Petal Width Statistics.png')
 # histograms for each variable
 
 fig, axes = plt.subplots(2,2, figsize = (15,15))
+setosa = iris[iris.Class == "Iris-setosa"]
+versicolor = iris[iris.Class == "Iris-versicolor"]
+virginica = iris[iris.Class == "Iris-virginica"]
 
 # sepal length histogram 
 axes[0,0].set_title("Sepal Length", fontweight='bold')
 axes[0,0].set(xlabel='Sepal Length')
-axes[0,0].hist(iris['Sepal_Length'], bins=7)
+axes[0,0].hist(setosa['Sepal_Length'], bins=7, alpha=0.5, label="Iris-setosa", color='blue')
+axes[0,0].hist(versicolor['Sepal_Length'], bins=7, alpha=0.5, label="Iris-versicolor", color='purple')
+axes[0,0].hist(virginica['Sepal_Length'], bins=7, alpha=0.5, label="Iris-virginica", color='indigo')
+axes[0,0].legend(loc='upper right')
  
 # sepal width histogram 
 axes[0,1].set_title("Sepal Width", fontweight='bold')
 axes[0,1].set(xlabel='Sepal Width')
-axes[0,1].hist(iris['Sepal_Width'], bins=5);
+axes[0,1].hist(setosa['Sepal_Width'], bins=5, alpha=0.5, label="Iris-setosa", color='blue')
+axes[0,1].hist(versicolor['Sepal_Width'], bins=5, alpha=0.5, label="Iris-versicolor", color='purple')
+axes[0,1].hist(virginica['Sepal_Width'], bins=5, alpha=0.5, label="Iris-virginica", color='indigo')
+axes[0,1].legend(loc='upper right');
 
 # petal length histogram 
 axes[1,0].set_title("Petal Length", fontweight='bold')
 axes[1,0].set(xlabel='Petal Length')
-axes[1,0].hist(iris['Petal_Length'], bins=6);
+axes[1,0].hist(setosa['Petal_Length'], bins=6, alpha=0.5, label="Iris-setosa", color='blue')
+axes[1,0].hist(versicolor['Petal_Length'], bins=6, alpha=0.5, label="Iris-versicolor", color='purple')
+axes[1,0].hist(virginica['Petal_Length'], bins=6, alpha=0.5, label="Iris-virginica", color='indigo')
+axes[1,0].legend(loc='upper right');
 
 # petal width histogram 
 axes[1,1].set_title("Petal Width", fontweight='bold')
 axes[1,1].set(xlabel='Petal Width')
-axes[1,1].hist(iris['Petal_Width'], bins=6);
+axes[1,1].hist(setosa['Petal_Width'], bins=6, alpha=0.5, label="Iris-setosa", color='blue')
+axes[1,1].hist(versicolor['Petal_Width'], bins=6, alpha=0.5, label="Iris-versicolor", color='purple')
+axes[1,1].hist(virginica['Petal_Width'], bins=6, alpha=0.5, label="Iris-virginica", color='indigo')
+axes[1,1].legend(loc='upper right');
 
 for ax in axes.flat:
     ax.set(ylabel='No. of Occurrences')   # as y label is the same for all histograms
@@ -174,7 +189,7 @@ grouped = iris.groupby('Class')
 for key, group in grouped:
     group.plot(ax=ax, kind='scatter', x='Sepal_Length', y='Sepal_Width', label=key, color=colors[key])
 
-plt.legend(bbox_to_anchor=(1, 1), loc=2)   # places legend outside the plot
+plt.legend()
 plt.xlabel("Sepal Length (cm)")
 plt.ylabel("Sepal Width (cm)")
 plt.savefig('Sepal Length vs Sepal Width.png')
@@ -189,7 +204,7 @@ grouped = iris.groupby('Class')
 for key, group in grouped:
     group.plot(ax=ax, kind='scatter', x='Petal_Length', y='Petal_Width', label=key, color=colors[key])
 
-plt.legend(bbox_to_anchor=(1, 1), loc=2)   # places legend outside the plot
+plt.legend()
 plt.xlabel("Petal Length (cm)")
 plt.ylabel("Petal Width (cm)")
 plt.savefig('Petal Length vs Petal Width.png')
