@@ -10,17 +10,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from tabulate import tabulate
+import seaborn as sns
 import sys
 
 csv_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 # using the attribute information as the column names
 col_names = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width','Class']
 iris =  pd.read_csv(csv_url, names = col_names)
-
-iris_stats = iris.agg({'Sepal_Length': ['mean', 'min', 'max', 'std'],
-                           'Sepal_Width': ['mean', 'min', 'max', 'std'],
-                           'Petal_Length': ['mean', 'min', 'max', 'std'],
-                           'Petal_Width': ['mean', 'min', 'max', 'std']})
 
 # Summary of each Variable
 def summary():
@@ -31,6 +27,10 @@ def summary():
     print("display statistics such as mean, min and max for each of the 4 variables when grouped together by class.\n")
 
     print("Table 1 - Iris Dataset Statistics")
+    iris_stats = iris.agg({'Sepal_Length': ['mean', 'min', 'max', 'std'],
+                           'Sepal_Width': ['mean', 'min', 'max', 'std'],
+                           'Petal_Length': ['mean', 'min', 'max', 'std'],
+                           'Petal_Width': ['mean', 'min', 'max', 'std']})
     print(tabulate(iris_stats, headers = ["Stat", "Sepal_Length (cm)", "Sepal_Width (cm)", "Petal_Length (cm)", "Petal_Width (cm)"], tablefmt='grid', stralign='center'), file=f)
     print('\n')
 
@@ -215,7 +215,12 @@ def scatter():
     plt.ylabel("Petal Width (cm)")
     plt.savefig('Petal Length vs Petal Width.png')
 
+def pair():
+    sns.pairplot(iris, hue = "Class", height=4, palette=['blue', 'purple', 'blueviolet'])
+    plt.savefig("Pairplot")
+
 
 distributionlineplots()
 hist()
 scatter()
+pair()
