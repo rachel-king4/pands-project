@@ -1,19 +1,74 @@
-Sepal Length is the first variable we are going to summarise.
-From the Histogram.png file, the top left histogram displays the number of occurrences for each sepal length.
-The majority of sepal lengths fall in the 5.0-6.5 cm region.
-There are few sepal lengths greater than 7.0cm.
+A table of statistics for each variable can be seen below.
+The first table displays statistics of the data set as a whole, while Tables 2,3,4 and 5
+display statistics such as mean, min and max for each of the 4 variables when grouped together by class.
 
-From the scatter plot of sepal length vs sepal width, it is clear that the species "Iris-setosa" has the smallest sepal lengths of all the species.The species "Iris-virginica" has mostly larger sepal lengths, while the species "Iris-versicolor" falls somewhere in the middle.
+Table 1 - Iris Dataset Statistics
++--------+---------------------+--------------------+---------------------+--------------------+
+|  Stat  |   Sepal_Length (cm) |   Sepal_Width (cm) |   Petal_Length (cm) |   Petal_Width (cm) |
++========+=====================+====================+=====================+====================+
+|  mean  |            5.84333  |           3.054    |             3.75867 |           1.19867  |
++--------+---------------------+--------------------+---------------------+--------------------+
+|  min   |            4.3      |           2        |             1       |           0.1      |
++--------+---------------------+--------------------+---------------------+--------------------+
+|  max   |            7.9      |           4.4      |             6.9     |           2.5      |
++--------+---------------------+--------------------+---------------------+--------------------+
+|  std   |            0.828066 |           0.433594 |             1.76442 |           0.763161 |
++--------+---------------------+--------------------+---------------------+--------------------+
 
-A table of some Sepal Length statistics can be seen below:
-+-----------------+--------+-------+-------+
-|      Class      |   Mean |   Min |   Max |
-+=================+========+=======+=======+
-|   Iris-setosa   |  5.006 |   4.3 |   5.8 |
-+-----------------+--------+-------+-------+
-| Iris-versicolor |  5.936 |   4.9 |   7   |
-+-----------------+--------+-------+-------+
-| Iris-virginica  |  6.588 |   4.9 |   7.9 |
-+-----------------+--------+-------+-------+
-From the Sepal Length Statistics plot, we can see the range of data for min, max and mean for all three classes of Iris plants.
-The line represents the mean for all three classes, while the shaded region represents the spread of data from minimum to maximum.
+
+Table 2 - Iris Dataset Sepal Length Statistics
++-----------------+-------------+------------+------------+
+|      Class      |   Mean (cm) |   Min (cm) |   Max (cm) |
++=================+=============+============+============+
+|   Iris-setosa   |       5.006 |        4.3 |        5.8 |
++-----------------+-------------+------------+------------+
+| Iris-versicolor |       5.936 |        4.9 |        7   |
++-----------------+-------------+------------+------------+
+| Iris-virginica  |       6.588 |        4.9 |        7.9 |
++-----------------+-------------+------------+------------+
+
+
+Table 3 - Iris Dataset Sepal Width Statistics
++-----------------+-------------+------------+------------+
+|      Class      |   Mean (cm) |   Min (cm) |   Max (cm) |
++=================+=============+============+============+
+|   Iris-setosa   |       3.418 |        2.3 |        4.4 |
++-----------------+-------------+------------+------------+
+| Iris-versicolor |       2.77  |        2   |        3.4 |
++-----------------+-------------+------------+------------+
+| Iris-virginica  |       2.974 |        2.2 |        3.8 |
++-----------------+-------------+------------+------------+
+
+
+Table 4 - Iris Dataset Petal Length Statistics
++-----------------+-------------+------------+------------+
+|      Class      |   Mean (cm) |   Min (cm) |   Max (cm) |
++=================+=============+============+============+
+|   Iris-setosa   |       1.464 |        1   |        1.9 |
++-----------------+-------------+------------+------------+
+| Iris-versicolor |       4.26  |        3   |        5.1 |
++-----------------+-------------+------------+------------+
+| Iris-virginica  |       5.552 |        4.5 |        6.9 |
++-----------------+-------------+------------+------------+
+
+
+Table 5 - Iris Dataset Petal Width Statistics
++-----------------+-------------+------------+------------+
+|      Class      |   Mean (cm) |   Min (cm) |   Max (cm) |
++=================+=============+============+============+
+|   Iris-setosa   |       0.244 |        0.1 |        0.6 |
++-----------------+-------------+------------+------------+
+| Iris-versicolor |       1.326 |        1   |        1.8 |
++-----------------+-------------+------------+------------+
+| Iris-virginica  |       2.026 |        1.4 |        2.5 |
++-----------------+-------------+------------+------------+
+
+
+Sepal Length is the largest variable, with a mean of 5.8, while Petal Width is the smallest with a mean of 1.2.
+The largest Sepal Lengths occur in the Iris virginica species while the smallest occur in the Iris setosa.
+However, Iris setosa represents the largest Sepal Widths. 
+
+
+For the petal characteristics then, Petal Length and Petal Width are both largest in the Iris virginica species, and smallest in the Iris setosa species.
+Petal Length is the variable with the widest spread of data, with a standard deviation of 1.7 and a range from a minimum of 1 to a maximum of 6.9.
+Sepal Width then is the variable with the smallest spread of data, as all three species of Iris plant have similar sepal widths.

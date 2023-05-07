@@ -44,10 +44,12 @@ i.e if petal length is < 2.1, the species is highly likely to be Iris-setosa, if
 Performing exploratory data analysis means to analyse data using visual techniques. Python can be used to do this. It enables trends/patterns to be identified.
 
 My analysis shows basic statistics in relation to mean, median, min and max.
+Summary of each variable and what the data shows
+Summary - put a few summary tables (count, descrivbe,info etc). Then put the stats table for each variable and write to the summary.txt file.
+Remove the discussion of the variables and add it to the summary above
+
 Histogram shows the distribution as well as the line plot with shading which shows a good visual on the distribution of data for each species for each of the 4 variables.
 Scatter plots show the relationship between sepal length & width and petal length & width
-
-
 
 ## **References**
 
@@ -60,3 +62,9 @@ https://stackoverflow.com/questions/74171240/python-linear-chart-with-min-max-an
 
 https://jamesrledoux.com/code/group-by-aggregate-pandas - table of mean, min and max data
 
+https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/ - overlapping histograms
+
+https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html - stacking the histograms as subplots 2 x 2
+
+https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file - to write a table to a file. tried to do this
+using f.write but i couldnt get it to work, so i researched how to write a table to a file using print and i discovered sys.stdout
