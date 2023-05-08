@@ -58,12 +58,12 @@ Performing exploratory data analysis means to analyse data using visual techniqu
 
 A number of modules were imported to aid in the analysis and visualisation of the data:
 
-    - Pandas (a Python library used for working with datasets and is used to analyse, explore and manipulate data) [j]
-    - Numpy (a Python library used for working with arrays) [k]
-    - Matplotlib (a Python library used for plotting data and for visualisation) [l]
-    - Tabulate (a Python package used to print tabular data in nicely formatted tables) [m]
-    - Seaborn (a Pyton library used for data visualisation - provides informative statistical graphics) [n]
-    - Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [o]
+- Pandas (a Python library used for working with datasets and is used to analyse, explore and manipulate data) [j]
+- Numpy (a Python library used for working with arrays) [k]
+- Matplotlib (a Python library used for plotting data and for visualisation) [l]
+- Tabulate (a Python package used to print tabular data in nicely formatted tables) [m]
+- Seaborn (a Pyton library used for data visualisation - provides informative statistical graphics) [n]
+- Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [o]
 
 These modules are very useful as they enable data analysed, structured into readable and well-foratted tables and graphs and provide control over the input and output of the program.
 This is very important when trying to create a clear picture of the story of the data and what it represents.
@@ -71,12 +71,11 @@ This is very important when trying to create a clear picture of the story of the
 The dataset is imported into the workspace directly from its URL. [p]
 It is then stored as a variable *iris* so it can be called to analyse and visualise the data it contains.
 
-'''
+```
 csv_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-# using the attribute information as the column names
 col_names = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width','Class']
 iris =  pd.read_csv(csv_url, names = col_names)
-'''
+```
 
 ### **Summary File** ##
 
@@ -85,8 +84,8 @@ The first table displays a table of statistics of the dataset as a whole, while 
 
 sys.stdout was used to ouput the print commands to the txt file. [q] (Note: I initially used f.write for this part of the program but I vouldnt get satisfactory reults to output the tables to the txt file, so from research of how to write a table to a file using print I discovered sys.stout)
 
-'''
-f = open('summary.txt', 'w')
+```
+    f = open('summary.txt', 'w')
     sys.stdout = f
     print("A table of statistics for each variable can be seen below.")
     print("The first table displays statistics of the data set as a whole, while Tables 2,3,4 and 5")
@@ -107,7 +106,7 @@ f = open('summary.txt', 'w')
     #with open('summary.txt', 'a') as f:
     print(tabulate(table_of_data, headers = ["Class", "Mean (cm)", "Min (cm)", "Max (cm)"], tablefmt='grid', stralign='center'), file=f)
     print('\n')
-'''
+```
 
 A lot of inference can be made about the data from these tables alone. In particular, that the Iris-setosa species/class is the smallest of the three, as it has the lowest mean for 3 of the 4 characteristics of the plant represented in the dataset. In contrast to this, Iris-virginica is generally speaking the largest species/class, as it has the highest mean for 3 of the 4 characteristics.
 
@@ -119,7 +118,7 @@ To visualise the data, a variety of graphs and plots were created using the Pyth
 
 Distribution line plots were created which display the mean of each of the four variables when the data is grouped by species/class. [s]
 
-'''
+```
 sepal_length = iris.groupby(["Class"],as_index=False).agg(
         min=pd.NamedAgg(column="Sepal_Length", aggfunc="min"),
         max=pd.NamedAgg(column="Sepal_Length", aggfunc="max"),
@@ -134,11 +133,11 @@ sepal_length = iris.groupby(["Class"],as_index=False).agg(
     plt.title("Sepal Length", fontweight='bold')
     plt.ylabel("Data for Sepal Length (cm)")
     plt.savefig('Sepal Length DLP.png')
-'''
+```
 
 The code above is used to generate a distribution line plot for the variable Sepal Length. The ouput is saved as a png file which can be seen below.
 
-![Sepal Length DLP output] https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20Statistics.png
+![Sepal Length DLP output] https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20DLP.png
 
 The line represents the mean for each of the three Iris plant species, while the shaded region shows the distribution of data from the minimum to the maximum data point for each species.
 
@@ -152,7 +151,7 @@ The histograms were also stacked as subplots in a 2x2 format for a cleaner displ
 
 Part of the code is seen below ([0,0] is the subplot that be displayed in the first row, first column; [0,1] is first row, second column; etc.):
 
-'''
+```
 fig, axes = plt.subplots(2,2, figsize = (15,15))
     setosa = iris[iris.Class == "Iris-setosa"]
     versicolor = iris[iris.Class == "Iris-versicolor"]
@@ -165,7 +164,7 @@ fig, axes = plt.subplots(2,2, figsize = (15,15))
     axes[0,0].hist(versicolor['Sepal_Length'], bins=7, alpha=0.5, label="Iris-versicolor", color='purple')
     axes[0,0].hist(virginica['Sepal_Length'], bins=7, alpha=0.5, label="Iris-virginica", color='indigo')
     axes[0,0].legend(loc='upper right')
-'''
+```
 
 ![Histograms output] https://github.com/rachel-king4/pands-project/blob/main/Histograms.png
 
@@ -175,7 +174,7 @@ Scatter plots were created for each pair of variables (Sepal Length vs Sepal Wid
 
 Two scatter plots were created for each of the pairs of variables [v]
 
-'''
+```
 fig, ax = plt.subplots()
     colors = {'Iris-setosa': 'blue', 'Iris-versicolor': 'purple' , 
             'Iris-virginica': 'indigo'}
@@ -188,7 +187,7 @@ fig, ax = plt.subplots()
     plt.xlabel("Petal Length (cm)")
     plt.ylabel("Petal Width (cm)")
     plt.savefig('Petal Length vs Petal Width.png')
-'''
+```
 
 ![Petal Length vs Width Scatter Output] https://github.com/rachel-king4/pands-project/blob/main/Petal%20Length%20vs%20Petal%20Width.png
 
@@ -202,11 +201,11 @@ Pairplots were created to, again, show the relationship between the variables an
 
 Pairplots were created using the Seaborn module. As there are four variables in the Iris dataset, three scatter plots are created for each variable (12 in total) and one distribution plot for each variable (4 in total). Overall, 16 plots were created and displayed as subplots in a 4x4 format. [b]
 
-
-'''
+```
 sns.pairplot(iris, hue = "Class", height=4, palette=['blue', 'purple', 'blueviolet'])
     plt.savefig("Pairplot")
-'''
+```
+
 ![Pairplot Output] https://github.com/rachel-king4/pands-project/blob/main/Pairplot.png
 
 The pairplots provide a very nice visualisation of the data. It is very clear from these plots that the Iris-setosa is the smallest of the Iris plant species and is clearly independent of the other two species. 
