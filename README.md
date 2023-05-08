@@ -11,7 +11,7 @@ The Pands module was undertaken in the first semester of Higher Diploma in Scien
 - [My Analysis](#my-analysis---what-it-entails-how-python-is-used-to-do-it-how-to-run-the-python-code)
     - [Modules Imported](#modules-imported)
     - [Summary File](#summary-file)
-         [Distribution Line Plots](#distribution-line-plots)
+         - [Distribution Line Plots](#distribution-line-plots)
          - [Histograms](#histograms)
          - [Scatter Plots](#scatter-plots)
          - [Pairplots](#pairplots)
