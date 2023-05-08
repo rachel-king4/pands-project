@@ -50,7 +50,7 @@ From the pairplots, it is clear petal length displays the clearest differentiati
 Scikit-learn is used to perform predictive analysis also, again where the species type can be predicted when values for each variable are chosen. [i]
 
 
-## **My Analysis - what it entails, how Python is used to do it, how to run the Python code, what the code does** ##
+## **My Analysis** ##
 
 Performing exploratory data analysis means to analyse data using visual techniques. Python can be used to do this as it enables trends/patterns to be identified.
 
@@ -137,7 +137,7 @@ sepal_length = iris.groupby(["Class"],as_index=False).agg(
 
 The code above is used to generate a distribution line plot for the variable Sepal Length. The ouput is saved as a png file which can be seen below.
 
-![Sepal Length DLP output] https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20DLP.png
+![Sepal Length DLP output](https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20DLP.png)
 
 The line represents the mean for each of the three Iris plant species, while the shaded region shows the distribution of data from the minimum to the maximum data point for each species.
 
@@ -166,7 +166,7 @@ fig, axes = plt.subplots(2,2, figsize = (15,15))
     axes[0,0].legend(loc='upper right')
 ```
 
-![Histograms output] https://github.com/rachel-king4/pands-project/blob/main/Histograms.png
+![Histograms output](https://github.com/rachel-king4/pands-project/blob/main/Histograms.png)
 
 #### **Scatter Plots** ####
 
@@ -189,7 +189,7 @@ fig, ax = plt.subplots()
     plt.savefig('Petal Length vs Petal Width.png')
 ```
 
-![Petal Length vs Width Scatter Output] https://github.com/rachel-king4/pands-project/blob/main/Petal%20Length%20vs%20Petal%20Width.png
+![Petal Length vs Width Scatter Output](https://github.com/rachel-king4/pands-project/blob/main/Petal%20Length%20vs%20Petal%20Width.png)
 
 This particular plot indicates sthere is very good correlation between these two variables (petal length and petal width). Perfect correlation (R-squared = 1) is outlined by a diagonal straight line from the point 0,0 on the scatter plot (the intersection of the x and y axes).
 
@@ -206,7 +206,7 @@ sns.pairplot(iris, hue = "Class", height=4, palette=['blue', 'purple', 'blueviol
     plt.savefig("Pairplot")
 ```
 
-![Pairplot Output] https://github.com/rachel-king4/pands-project/blob/main/Pairplot.png
+![Pairplot Output](https://github.com/rachel-king4/pands-project/blob/main/Pairplot.png)
 
 The pairplots provide a very nice visualisation of the data. It is very clear from these plots that the Iris-setosa is the smallest of the Iris plant species and is clearly independent of the other two species. 
 
