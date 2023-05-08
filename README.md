@@ -9,6 +9,14 @@ The Pands module was undertaken in the first semester of Higher Diploma in Scien
 - [Introduction](#introduction)
 - [Discussion of Previous Analyses](#discussion-of-previous-analyses)
 - [My Analysis](#my-analysis---what-it-entails-how-python-is-used-to-do-it-how-to-run-the-python-code)
+    - [Modules Imported](#modules-imported)
+    - [Summary File](#summary-file)
+         [Distribution Line Plots](#distribution-line-plots)
+         - [Histograms](#histograms)
+         - [Scatter Plots](#scatter-plots)
+         - [Pairplots](#pairplots)
+    - [Graphs/Plots](#graphsplots)
+
 - [References](#references)
 
 ## **Introduction** ##
@@ -195,7 +203,7 @@ This particular plot indicates sthere is very good correlation between these two
 
 It's also clear from these scatter plots, that the Iris-setosa species is linearly seperable from the other two species.
 
-#### **Pairplots
+#### **Pairplots** ####
 
 Pairplots were created to, again, show the relationship between the variables and display trends.
 
