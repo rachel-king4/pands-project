@@ -91,7 +91,7 @@ def distributionlineplots():
     plt.ylim(3,9)
     plt.title("Sepal Length", fontweight='bold')
     plt.ylabel("Data for Sepal Length (cm)")
-    plt.savefig('Sepal Length Statistics.png')
+    plt.savefig('Sepal Length DLP.png')
 
 
     sepal_width = iris.groupby(["Class"],as_index=False).agg(
@@ -106,7 +106,7 @@ def distributionlineplots():
     plt.ylim(1,5)
     plt.title("Sepal Width", fontweight='bold')
     plt.ylabel("Data for Sepal Width (cm)")
-    plt.savefig('Sepal Width Statistics.png')
+    plt.savefig('Sepal Width DLP.png')
 
 
     petal_width = iris.groupby(["Class"],as_index=False).agg(
@@ -121,7 +121,7 @@ def distributionlineplots():
     plt.ylim(0,3)
     plt.title("Petal Width", fontweight='bold')
     plt.ylabel("Data for Petal Width (cm)")
-    plt.savefig('Petal Width Statistics.png')
+    plt.savefig('Petal Width DLP.png')
 
 
     petal_length = iris.groupby(["Class"],as_index=False).agg(
@@ -137,7 +137,7 @@ def distributionlineplots():
     plt.ylim(0,8)
     plt.title("Petal Length", fontweight='bold')
     plt.ylabel("Data for Petal Length (cm)")
-    plt.savefig('Petal Length Statistics.png')
+    plt.savefig('Petal Length DLP.png')
 
 
 # histograms for each variable
