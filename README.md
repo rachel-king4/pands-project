@@ -23,7 +23,7 @@ The Pands module was undertaken in the first semester of Higher Diploma in Scien
 
 The Iris dataset is one of the most well-known data sets in relation to pattern recognition.
 
-It contains 3 classes, with each class referencing a type of iris plant. There are 50 instances of each class, with 150 instances in total.
+The dataset was created in 1936 by R.A Fisher. It contains 3 classes, with each class referencing a type of iris plant. There are 50 instances of each class, with 150 instances in total.
 
 Each class has 4 attributes, or variables, which are:
 
@@ -34,7 +34,9 @@ Each class has 4 attributes, or variables, which are:
 
 One class (Iris-setosa) is linearly separable from the other two, while the latter (Iris-versicolor and Iris-virginica) are not linearly separable from each other.
 
- 
+An image of the three Iris plant species referred to in the dataset can be seen below:
+
+![Iris Plants]
 
 ## **Discussion of Previous Analyses** ##
 
@@ -85,7 +87,7 @@ col_names = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width','Class']
 iris =  pd.read_csv(csv_url, names = col_names)
 ```
 
-### **Summary File** ##
+### **Summary File** ###
 
 A summary file was created which displays a number of tables.
 The first table displays a table of statistics of the dataset as a whole, while the remaining four tables display statistics such as mean, min and max for each of the 4 variables when grouped together by class. [w]
@@ -111,7 +113,6 @@ sys.stdout was used to ouput the print commands to the txt file. [q] (Note: I in
     print("Table 2 - Iris Dataset Sepal Length Statistics")
     table_of_data = iris.groupby('Class').agg({'Sepal_Length': ['mean', 'min', 'max']})
     table_of_data.reset_index(inplace=False)
-    #with open('summary.txt', 'a') as f:
     print(tabulate(table_of_data, headers = ["Class", "Mean (cm)", "Min (cm)", "Max (cm)"], tablefmt='grid', stralign='center'), file=f)
     print('\n')
 ```
@@ -122,9 +123,12 @@ A lot of inference can be made about the data from these tables alone. In partic
 
 To visualise the data, a variety of graphs and plots were created using the Python modules outlined above. These provide great insight into the data and what it represents in relation to the three species of Iris plant.
 
-#### **Distribution Line Plots** ####
+These plots were all created as functions, so they could be called together at the end of the code. In my opinion, this makes the code neater and easier to read/follow.
+When the program is ran, the last 4 lines of code (lines 222-225) call the code written inside the fucntions for each of the plots/graphs for whcih code was written for in the program.
 
-Distribution line plots were created which display the mean of each of the four variables when the data is grouped by species/class. [s]
+#### **Line Plots** ####
+
+Line plots were created which display the mean of each of the four variables when the data is grouped by species/class. [s]
 
 ```
 sepal_length = iris.groupby(["Class"],as_index=False).agg(
@@ -143,11 +147,12 @@ sepal_length = iris.groupby(["Class"],as_index=False).agg(
     plt.savefig('Sepal Length DLP.png')
 ```
 
-The code above is used to generate a distribution line plot for the variable Sepal Length. The ouput is saved as a png file which can be seen below.
+The code above is used to generate a line plot for the variable Sepal Length. The ouput is saved as a png file which can be seen below.
 
-![Sepal Length DLP output](https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20DLP.png)
+![Sepal Length LP output](https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20LP.png)
 
 The line represents the mean for each of the three Iris plant species, while the shaded region shows the distribution of data from the minimum to the maximum data point for each species.
+
 
 #### **Histograms** ####
 
@@ -203,6 +208,7 @@ This particular plot indicates sthere is very good correlation between these two
 
 It's also clear from these scatter plots, that the Iris-setosa species is linearly seperable from the other two species.
 
+
 #### **Pairplots** ####
 
 Pairplots were created to, again, show the relationship between the variables and display trends.
@@ -243,3 +249,4 @@ The pairplots provide a very nice visualisation of the data. It is very clear fr
 [u] https://www.tibco.com/reference-center/what-is-a-scatter-chart#:~:text=A%20scatter%20chart%2C%20also%20called,in%20almost%20any%20other%20form.
 [v] https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/ 
 [w] https://jamesrledoux.com/code/group-by-aggregate-pandas
+[x] https://www.angela1c.com/projects/iris_project/the-iris-dataset/
