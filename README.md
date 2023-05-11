@@ -32,32 +32,32 @@ Each class has 4 attributes, or variables, which are:
 - Petal length in centimetres
 - Petal width in centimetres
 
-One class (Iris-setosa) is linearly separable from the other two, while the latter (Iris-versicolor and Iris-virginica) are not linearly separable from each other.
+One class (Iris-setosa) is linearly separable from the other two, while the latter (Iris-versicolor and Iris-virginica) are not linearly separable from each other. [[1]](#1)
 
 An image of the three Iris plant species referred to in the dataset can be seen below:
 
-![Iris Plants]
+![Iris Plants](https://github.com/rachel-king4/pands-project/blob/main/Iris%20plants.jpg)
 
 ## **Discussion of Previous Analyses** ##
 
 The Iris data set is one of the most analysed data sets available on the internet. As it is a simple dataset, with four variables of three species of Iris plant, with each species having 50 instances each, much of the previous analyses are similar in nature.
 
 Most analysis of the data uses scatter plots and pair plots to show that the species Iris-setosa is linearly separable from the other two species (Iris-virginica and Iris-versicolor).
-From the scatter plots comparing sepal length and sepal width, it is clear that the Iris-setosa species is separable from the other two species as it has smaller sepal lengths and larger sepal widths than the other two species. The Iris-virginica and Iris-versicolor data is not distinguishable from each other. [a] [b]
+From the scatter plots comparing sepal length and sepal width, it is clear that the Iris-setosa species is separable from the other two species as it has smaller sepal lengths and larger sepal widths than the other two species. The Iris-virginica and Iris-versicolor data is not distinguishable from each other. [[2]](#2) [[3]](#3)
 
-In particular, pair plots which show relationships between two variables [c] are used to display trends and show this linear separability of the Iris-setosa species from Iris-virginica and Iris-versiscolor, while also showing that the virginica and versicolor species are not linearly separable from each other. [d]
-Linear separability exists if there is at least one line in the plane which separates datapoints of one class from datapoints of the other class. [e]
+In particular, pair plots which show relationships between two variables [[4]](#4) are used to display trends and show this linear separability of the Iris-setosa species from Iris-virginica and Iris-versiscolor, while also showing that the virginica and versicolor species are not linearly separable from each other. [[5]](#5)
+Linear separability exists if there is at least one line in the plane which separates datapoints of one class from datapoints of the other class. [[6]](#6)
 
-Box plots and violin plots are also often used to show distribution and outliers. From the box plots, it is clear that Iris-setosa has the smallest features, with the lowest mean and quite little distribution for petal length, petal width and sepal length. [f] [g]
+Box plots and violin plots are also often used to show distribution and outliers. From the box plots, it is clear that Iris-setosa has the smallest features, with the lowest mean and quite little distribution for petal length, petal width and sepal length. [[7]](#7) [[8]](#8)
 Violin plots also show distribution, whereby the fatter part of the plot show highly dense amount of data while the thinner plot represents less dense or low amount of datapoints. 
-From the violin plots, it is clear that Iris-setosa has low distribution of data for features petal length and petal width, with the plots appearing quite wide in nature. In contrast to this, Iris-versicolor has long and narrow violin plots for features petal width and sepal length, representing data which is widely distributed. [b]
+From the violin plots, it is clear that Iris-setosa has low distribution of data for features petal length and petal width, with the plots appearing quite wide in nature. In contrast to this, Iris-versicolor has long and narrow violin plots for features petal width and sepal length, representing data which is widely distributed. [[3]](#3)
 
 
-One particular analysis used correlation plots which show which variables display good correlation and which have no correlation. Petal length and petal width have extremely high correlation, with results of 0.96 (1 being 100% correlation). Sepal and petal length also show very good correlation, with a result of 0.87. [h]
+One particular analysis used correlation plots which show which variables display good correlation and which have no correlation. Petal length and petal width have extremely high correlation, with results of 0.96 (1 being 100% correlation). Sepal and petal length also show very good correlation, with a result of 0.87. [[9]](#9)
 
 Another interesting type of anlaysis focused on predictive analysis which can give predictions on the species for a given value of a variable. i.e. if petal length is < 2.1, the species is highly likely to be Iris-setosa, if petal length is > 4.8 it's highly likely to be Iris-virginica.
-From the pairplots, it is clear petal length displays the clearest differentiation between the three species types. Therefore, petal length is a good variable to choose when perfor  ming this analysis. [b]
-Scikit-learn is used to perform predictive analysis also, again where the species type can be predicted when values for each variable are chosen. [i]
+From the pairplots, it is clear petal length displays the clearest differentiation between the three species types. Therefore, petal length is a good variable to choose when perfor  ming this analysis. [[3]](#3)
+Scikit-learn is used to perform predictive analysis also, again where the species type can be predicted when values for each variable are chosen. [[10]](#10)
 
 
 ## **My Analysis** ##
@@ -68,17 +68,17 @@ Performing exploratory data analysis means to analyse data using visual techniqu
 
 A number of modules were imported to aid in the analysis and visualisation of the data:
 
-- Pandas (a Python library used for working with datasets and is used to analyse, explore and manipulate data) [j]
-- Numpy (a Python library used for working with arrays) [k]
-- Matplotlib (a Python library used for plotting data and for visualisation) [l]
-- Tabulate (a Python package used to print tabular data in nicely formatted tables) [m]
-- Seaborn (a Pyton library used for data visualisation - provides informative statistical graphics) [n]
-- Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [o]
+- Pandas (a Python library used for working with datasets and is used to analyse, explore and manipulate data) [[11]](#11)
+- Numpy (a Python library used for working with arrays) [[12]](#12)
+- Matplotlib (a Python library used for plotting data and for visualisation) [[13]](#13)
+- Tabulate (a Python package used to print tabular data in nicely formatted tables) [[14]](#14)
+- Seaborn (a Pyton library used for data visualisation - provides informative statistical graphics) [[15]](#15)
+- Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [[16]](#16)
 
 These modules are very useful as they enable data analysed, structured into readable and well-foratted tables and graphs and provide control over the input and output of the program.
 This is very important when trying to create a clear picture of the story of the data and what it represents.
 
-The dataset is imported into the workspace directly from its URL. [p]
+The dataset is imported into the workspace directly from its URL. [[17]](#17)
 It is then stored as a variable *iris* so it can be called to analyse and visualise the data it contains.
 
 ```
@@ -90,9 +90,9 @@ iris =  pd.read_csv(csv_url, names = col_names)
 ### **Summary File** ###
 
 A summary file was created which displays a number of tables.
-The first table displays a table of statistics of the dataset as a whole, while the remaining four tables display statistics such as mean, min and max for each of the 4 variables when grouped together by class. [w]
+The first table displays a table of statistics of the dataset as a whole, while the remaining four tables display statistics such as mean, min and max for each of the 4 variables when grouped together by class. [[24]](#24)
 
-sys.stdout was used to ouput the print commands to the txt file. [q] (Note: I initially used f.write for this part of the program but I vouldnt get satisfactory reults to output the tables to the txt file, so from research of how to write a table to a file using print I discovered sys.stout)
+sys.stdout was used to ouput the print commands to the txt file. [[18]](#18) (Note: I initially used f.write for this part of the program but I vouldnt get satisfactory reults to output the tables to the txt file, so from research of how to write a table to a file using print I discovered sys.stout)
 
 ```
     f = open('summary.txt', 'w')
@@ -124,11 +124,11 @@ A lot of inference can be made about the data from these tables alone. In partic
 To visualise the data, a variety of graphs and plots were created using the Python modules outlined above. These provide great insight into the data and what it represents in relation to the three species of Iris plant.
 
 These plots were all created as functions, so they could be called together at the end of the code. In my opinion, this makes the code neater and easier to read/follow.
-When the program is ran, the last 4 lines of code (lines 222-225) call the code written inside the fucntions for each of the plots/graphs for whcih code was written for in the program.
+When the program is ran, the last 4 lines of code (lines 222-225) call the code written inside the fucntions for each of the plots/graphs for which code was written for in the program.
 
 #### **Line Plots** ####
 
-Line plots were created which display the mean of each of the four variables when the data is grouped by species/class. [s]
+Line plots were created which display the mean of each of the four variables when the data is grouped by species/class. [[20]](#20)
 
 ```
 sepal_length = iris.groupby(["Class"],as_index=False).agg(
@@ -158,9 +158,9 @@ The line represents the mean for each of the three Iris plant species, while the
 
 Histograms were created for each of the four variables. Histograms display the distribution of the data points of each variable as a series of bars.
 
-Four histograms were created, one for each variable. The Iris species were overlapped on each histogram [r] to allow comparison of the data and good visualisation of the similarities and differences in each Iris plant species.
+Four histograms were created, one for each variable. The Iris species were overlapped on each histogram [[19]](#19) to allow comparison of the data and good visualisation of the similarities and differences in each Iris plant species.
 
-The histograms were also stacked as subplots in a 2x2 format for a cleaner display of the data. [t]
+The histograms were also stacked as subplots in a 2x2 format for a cleaner display of the data. [[21]](#21)
 
 Part of the code is seen below ([0,0] is the subplot that be displayed in the first row, first column; [0,1] is first row, second column; etc.):
 
@@ -183,9 +183,9 @@ fig, axes = plt.subplots(2,2, figsize = (15,15))
 
 #### **Scatter Plots** ####
 
-Scatter plots were created for each pair of variables (Sepal Length vs Sepal Width and Petal Length vs Petal Width). Scatter plots show the relationship between two variables, which allow viewers to easily identify any trends. [u]
+Scatter plots were created for each pair of variables (Sepal Length vs Sepal Width and Petal Length vs Petal Width). Scatter plots show the relationship between two variables, which allow viewers to easily identify any trends. [[22]](#22)
 
-Two scatter plots were created for each of the pairs of variables [v]
+Two scatter plots were created for each of the pairs of variables [[23]](#23)
 
 ```
 fig, ax = plt.subplots()
@@ -213,7 +213,7 @@ It's also clear from these scatter plots, that the Iris-setosa species is linear
 
 Pairplots were created to, again, show the relationship between the variables and display trends.
 
-Pairplots were created using the Seaborn module. As there are four variables in the Iris dataset, three scatter plots are created for each variable (12 in total) and one distribution plot for each variable (4 in total). Overall, 16 plots were created and displayed as subplots in a 4x4 format. [b]
+Pairplots were created using the Seaborn module. As there are four variables in the Iris dataset, three scatter plots are created for each variable (12 in total) and one distribution plot for each variable (4 in total). Overall, 16 plots were created and displayed as subplots in a 4x4 format. [[3]](#3)
 
 ```
 sns.pairplot(iris, hue = "Class", height=4, palette=['blue', 'purple', 'blueviolet'])
@@ -226,27 +226,51 @@ The pairplots provide a very nice visualisation of the data. It is very clear fr
 
 ## **References**
 
-[a] https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
-[b] https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202.1%2C%20then,then%20species%20is%20Iris%20Virginica
-[c] https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166
-[d] https://www.scaler.com/topics/machine-learning/iris-dataset-project/
-[e] https://mylearningsinaiml.wordpress.com/concepts/linearly-separable-data/
-[f] https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202.1%2C%20then,then%20species%20is%20Iris%20Virginica
-[g] https://levelup.gitconnected.com/unveiling-the-mysteries-of-the-iris-dataset-a-comprehensive-analysis-and-machine-learning-f5c4f9dbcd6d
-[h] https://www.kaggle.com/code/lalitharajesh/iris-dataset-exploratory-data-analysis
-[i] https://www.scaler.com/topics/machine-learning/iris-dataset-project/
-[j] https://www.w3schools.com/python/pandas/pandas_intro.asp
-[k] https://www.w3schools.com/python/numpy/numpy_intro.asp
-[l] https://www.w3schools.com/python/matplotlib_intro.asp
-[m] https://analyticsindiamag.com/beginners-guide-to-tabulate-python-tool-for-creating-nicely-formatted-tables/#:~:text=Tabulate%20is%20an%20open%2Dsource,downloaded%20in%20multiple%20output%20formats
-[n] https://seaborn.pydata.org/
-[o] https://www.geeksforgeeks.org/python-sys-module/
-[p] https://www.angela1c.com/projects/iris_project/downloading-iris/
-[q] https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file 
-[r] https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/
-[s] https://stackoverflow.com/questions/74171240/python-linear-chart-with-min-max-and-avg
-[t] https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
-[u] https://www.tibco.com/reference-center/what-is-a-scatter-chart#:~:text=A%20scatter%20chart%2C%20also%20called,in%20almost%20any%20other%20form.
-[v] https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/ 
-[w] https://jamesrledoux.com/code/group-by-aggregate-pandas
-[x] https://www.angela1c.com/projects/iris_project/the-iris-dataset/
+<a id="1">[1]</a>
+(Angela1c [2021](https://www.angela1c.com/projects/iris_project/the-iris-dataset/))
+<a id="2">[2]</a>
+(GeeksforGeeks [n.d](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/))
+<a id="3">[3]</a>
+(Medium.com [2021](https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202))
+<a id="4">[4]</a>
+(Towardsdatascience.com [2018](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166))
+<a id="5">[5]</a>
+(Scaler.com [2023](https://www.scaler.com/topics/machine-learning/iris-dataset-project/))
+<a id="6">[6]</a>
+(mylearningsinaiml [ n.d.](https://mylearningsinaiml.wordpress.com/concepts/linearly-separable-data/))
+<a id="7">[7]</a>
+(Medium.com [2021](https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202))
+<a id="8">[8]</a>
+(Level Up Coding [2016](https://levelup.gitconnected.com/unveiling-the-mysteries-of-the-iris-dataset-a-comprehensive-analysis-and-machine-learning-f5c4f9dbcd6d))
+<a id="9">[9]</a>
+(Kaggle.com [2018](https://www.kaggle.com/code/lalitharajesh/iris-dataset-exploratory-data-analysis))
+<a id="10">[10]</a>
+(Scaler.com [2023](https://www.scaler.com/topics/machine-learning/iris-dataset-project/))
+<a id="11">[11]</a>
+(W3schools.com [ n.d.](https://www.w3schools.com/python/pandas/pandas_intro.asp))
+<a id="12">[12]</a>
+(W3schools.com [ n.d.](https://www.w3schools.com/python/numpy/numpy_intro.asp))
+<a id="13">[13]</a>
+(W3schools.com [ n.d.](https://www.w3schools.com/python/matplotlib_intro.asp))
+<a id="14">[14]</a>
+(Analytics India Mag [2020](https://analyticsindiamag.com/beginners-guide-to-tabulate-python-tool-for-creating-nicely-formatted-tables/#:~:text=Tabulate%20is%20an%20open%2Dsource,downloaded%20in%20multiple%20output%20formats))
+<a id="15">[15]</a>
+(Seaborn.pydata.org [2012](https://seaborn.pydata.org/))
+<a id="16">[16]</a>
+(GeeksForGeeks.com [ n.d.](https://www.geeksforgeeks.org/python-sys-module/))
+<a id="17">[17]</a>
+(Angela1c [2021](https://www.angela1c.com/projects/iris_project/the-iris-dataset/))
+<a id="18">[18]</a>
+(Stackoverflow.com [2011](https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file))
+<a id="19">[19]</a>
+(Datavizpyr.com [2020](https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/))
+<a id="20">[20]</a>
+(Stackoverflow.com [2022](https://stackoverflow.com/questions/74171240/python-linear-chart-with-min-max-and-avg))
+<a id="21">[21]</a>
+(Matplotlib.org [ n.d.](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html))
+<a id="22">[22]</a>
+(tibco.com [ n.d.](https://www.tibco.com/reference-center/what-is-a-scatter-chart#:~:text=A%20scatter%20chart%2C%20also%20called,in%20almost%20any%20other%20form))
+<a id="23">[23]</a>
+(GeeksForGeeks.com [ n.d.](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/))
+<a id="24">[24]</a>
+(Jamesrledoux.com [2019](https://jamesrledoux.com/code/group-by-aggregate-pandas))
