@@ -228,49 +228,72 @@ The pairplots provide a very nice visualisation of the data. It is very clear fr
 
 <a id="1">[1]</a>
 (Angela1c [2021](https://www.angela1c.com/projects/iris_project/the-iris-dataset/))
+
 <a id="2">[2]</a>
 (GeeksforGeeks [n.d](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/))
+
 <a id="3">[3]</a>
 (Medium.com [2021](https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202))
+
 <a id="4">[4]</a>
 (Towardsdatascience.com [2018](https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166))
+
 <a id="5">[5]</a>
 (Scaler.com [2023](https://www.scaler.com/topics/machine-learning/iris-dataset-project/))
+
 <a id="6">[6]</a>
 (mylearningsinaiml [ n.d.](https://mylearningsinaiml.wordpress.com/concepts/linearly-separable-data/))
+
 <a id="7">[7]</a>
 (Medium.com [2021](https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda#:~:text=Data%20Insights%3A,-The%20pdf%20curve&text=If%20petal%20length%20%3C%202))
+
 <a id="8">[8]</a>
 (Level Up Coding [2016](https://levelup.gitconnected.com/unveiling-the-mysteries-of-the-iris-dataset-a-comprehensive-analysis-and-machine-learning-f5c4f9dbcd6d))
+
 <a id="9">[9]</a>
 (Kaggle.com [2018](https://www.kaggle.com/code/lalitharajesh/iris-dataset-exploratory-data-analysis))
+
 <a id="10">[10]</a>
 (Scaler.com [2023](https://www.scaler.com/topics/machine-learning/iris-dataset-project/))
+
 <a id="11">[11]</a>
 (W3schools.com [ n.d.](https://www.w3schools.com/python/pandas/pandas_intro.asp))
+
 <a id="12">[12]</a>
 (W3schools.com [ n.d.](https://www.w3schools.com/python/numpy/numpy_intro.asp))
+
 <a id="13">[13]</a>
 (W3schools.com [ n.d.](https://www.w3schools.com/python/matplotlib_intro.asp))
+
 <a id="14">[14]</a>
 (Analytics India Mag [2020](https://analyticsindiamag.com/beginners-guide-to-tabulate-python-tool-for-creating-nicely-formatted-tables/#:~:text=Tabulate%20is%20an%20open%2Dsource,downloaded%20in%20multiple%20output%20formats))
+
 <a id="15">[15]</a>
 (Seaborn.pydata.org [2012](https://seaborn.pydata.org/))
+
 <a id="16">[16]</a>
 (GeeksForGeeks.com [ n.d.](https://www.geeksforgeeks.org/python-sys-module/))
+
 <a id="17">[17]</a>
 (Angela1c [2021](https://www.angela1c.com/projects/iris_project/the-iris-dataset/))
+
 <a id="18">[18]</a>
 (Stackoverflow.com [2011](https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file))
+
 <a id="19">[19]</a>
 (Datavizpyr.com [2020](https://datavizpyr.com/overlapping-histograms-with-matplotlib-in-python/))
+
 <a id="20">[20]</a>
 (Stackoverflow.com [2022](https://stackoverflow.com/questions/74171240/python-linear-chart-with-min-max-and-avg))
+
 <a id="21">[21]</a>
 (Matplotlib.org [ n.d.](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html))
+
 <a id="22">[22]</a>
 (tibco.com [ n.d.](https://www.tibco.com/reference-center/what-is-a-scatter-chart#:~:text=A%20scatter%20chart%2C%20also%20called,in%20almost%20any%20other%20form))
+
 <a id="23">[23]</a>
 (GeeksForGeeks.com [ n.d.](https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/))
+
 <a id="24">[24]</a>
 (Jamesrledoux.com [2019](https://jamesrledoux.com/code/group-by-aggregate-pandas))
