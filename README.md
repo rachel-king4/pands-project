@@ -55,8 +55,8 @@ From the violin plots, it is clear that Iris-setosa has low distribution of data
 
 One particular analysis used correlation plots which show which variables display good correlation and which have no correlation. Petal length and petal width have extremely high correlation, with results of 0.96 (1 being 100% correlation). Sepal and petal length also show very good correlation, with a result of 0.87. [[9]](#9)
 
-Another interesting type of anlaysis focused on predictive analysis which can give predictions on the species for a given value of a variable. i.e. if petal length is < 2.1, the species is highly likely to be Iris-setosa, if petal length is > 4.8 it's highly likely to be Iris-virginica.
-From the pairplots, it is clear petal length displays the clearest differentiation between the three species types. Therefore, petal length is a good variable to choose when perfor  ming this analysis. [[3]](#3)
+Another interesting type of analysis focused on predictive analysis which can give predictions on the species for a given value of a variable. i.e. if petal length is < 2.1, the species is highly likely to be Iris-setosa, if petal length is > 4.8 it's highly likely to be Iris-virginica.
+From the pairplots, it is clear petal length displays the clearest differentiation between the three species types. Therefore, petal length is a good variable to choose when performing this analysis. [[3]](#3)
 Scikit-learn is used to perform predictive analysis also, again where the species type can be predicted when values for each variable are chosen. [[10]](#10)
 
 
@@ -72,10 +72,10 @@ A number of modules were imported to aid in the analysis and visualisation of th
 - Numpy (a Python library used for working with arrays) [[12]](#12)
 - Matplotlib (a Python library used for plotting data and for visualisation) [[13]](#13)
 - Tabulate (a Python package used to print tabular data in nicely formatted tables) [[14]](#14)
-- Seaborn (a Pyton library used for data visualisation - provides informative statistical graphics) [[15]](#15)
+- Seaborn (a Python library used for data visualisation - provides informative statistical graphics) [[15]](#15)
 - Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [[16]](#16)
 
-These modules are very useful as they enable data analysed, structured into readable and well-foratted tables and graphs and provide control over the input and output of the program.
+These modules are very useful as they enable data analysed, structured into readable and well-formatted tables and graphs and provide control over the input and output of the program.
 This is very important when trying to create a clear picture of the story of the data and what it represents.
 
 The dataset is imported into the workspace directly from its URL. [[17]](#17)
@@ -92,7 +92,7 @@ iris =  pd.read_csv(csv_url, names = col_names)
 A summary file was created which displays a number of tables.
 The first table displays a table of statistics of the dataset as a whole, while the remaining four tables display statistics such as mean, min and max for each of the 4 variables when grouped together by class. [[24]](#24)
 
-sys.stdout was used to ouput the print commands to the txt file. [[18]](#18) (Note: I initially used f.write for this part of the program but I vouldnt get satisfactory reults to output the tables to the txt file, so from research of how to write a table to a file using print I discovered sys.stout)
+sys.stdout was used to output the print commands to the txt file. [[18]](#18) (Note: I initially used f.write for this part of the program but I couldn't get satisfactory results to output the tables to the txt file, so from research of how to write a table to a file using print I discovered sys.stout)
 
 ```
     f = open('summary.txt', 'w')
@@ -117,14 +117,14 @@ sys.stdout was used to ouput the print commands to the txt file. [[18]](#18) (No
     print('\n')
 ```
 
-A lot of inference can be made about the data from these tables alone. In particular, that the Iris-setosa species/class is the smallest of the three, as it has the lowest mean for 3 of the 4 characteristics of the plant represented in the dataset. In contrast to this, Iris-virginica is generally speaking the largest species/class, as it has the highest mean for 3 of the 4 characteristics.
+A lot of inference can be made about the data from these tables alone. In particular, that the Iris-setosa species/class is the smallest of the three, as it has the lowest mean for 3 of the 4 characteristics of the plant represented in the dataset. In contrast to this, Iris-virginica is, generally speaking, the largest species/class, as it has the highest mean for 3 of the 4 characteristics.
 
 ### **Graphs/Plots** ###
 
 To visualise the data, a variety of graphs and plots were created using the Python modules outlined above. These provide great insight into the data and what it represents in relation to the three species of Iris plant.
 
 These plots were all created as functions, so they could be called together at the end of the code. In my opinion, this makes the code neater and easier to read/follow.
-When the program is ran, the last 4 lines of code (lines 222-225) call the code written inside the fucntions for each of the plots/graphs for which code was written for in the program.
+When the program is run, the last 4 lines of code (lines 222-225) call the code written inside the functions for each of the plots/graphs for which code was written for in the program.
 
 #### **Line Plots** ####
 
@@ -147,7 +147,7 @@ sepal_length = iris.groupby(["Class"],as_index=False).agg(
     plt.savefig('Sepal Length DLP.png')
 ```
 
-The code above is used to generate a line plot for the variable Sepal Length. The ouput is saved as a png file which can be seen below.
+The code above is used to generate a line plot for the variable Sepal Length. The output is saved as a png file which can be seen below.
 
 ![Sepal Length LP output](https://github.com/rachel-king4/pands-project/blob/main/Sepal%20Length%20LP.png)
 
@@ -204,9 +204,9 @@ fig, ax = plt.subplots()
 
 ![Petal Length vs Width Scatter Output](https://github.com/rachel-king4/pands-project/blob/main/Petal%20Length%20vs%20Petal%20Width.png)
 
-This particular plot indicates sthere is very good correlation between these two variables (petal length and petal width). Perfect correlation (R-squared = 1) is outlined by a diagonal straight line from the point 0,0 on the scatter plot (the intersection of the x and y axes).
+This particular plot indicates there is very good correlation between these two variables (petal length and petal width). Perfect correlation (R-squared = 1) is outlined by a diagonal straight line from the point 0,0 on the scatter plot (the intersection of the x and y axes).
 
-It's also clear from these scatter plots, that the Iris-setosa species is linearly seperable from the other two species.
+It's also clear from these scatter plots, that the Iris-setosa species is linearly separable from the other two species.
 
 
 #### **Pairplots** ####
