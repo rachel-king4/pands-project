@@ -75,7 +75,7 @@ A number of modules were imported to aid in the analysis and visualisation of th
 - Seaborn (a Python library used for data visualisation - provides informative statistical graphics) [[15]](#15)
 - Sys (a Python module that provides functions and variables that are used to manipulate parts of the Python runtime environment) [[16]](#16)
 
-These modules are very useful as they enable data analysed, structured into readable and well-formatted tables and graphs and provide control over the input and output of the program.
+These modules are very useful as they enable data to be analysed, structured into readable and well-formatted tables & graphs and provide control over the input and output of the program.
 This is very important when trying to create a clear picture of the story of the data and what it represents.
 
 The dataset is imported into the workspace directly from its URL. [[17]](#17)
